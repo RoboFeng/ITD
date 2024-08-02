@@ -1,0 +1,35 @@
+# common
+run_freq: 100.0 # Hz
+bag_path: "/media/zyf/DataCenter/LiDAR_datasets/Fusionportable/filtered/fusionportable0-OS1-128/20220216_corridor_day_filtered.bag"
+pose_path: "/media/zyf/DataCenter/LiDAR_datasets/Fusionportable/traj/20220216_corridor_day.txt"
+cloud_topic: "/os_cloud_node/points"
+width: 2048
+height: 128
+kf_frame_gap: 10
+
+# corner
+corner_fast_thres: 110.0
+corner_blind_min: 0.2
+corner_blind_max: 30.0
+corner_voxel_size: 0.3
+corner_nms_radius: 1.0
+# descriptor
+descriptor_near_num: 10
+descriptor_min_len: 1.0
+descriptor_max_len: 20.0
+# loop detector
+min_loop_search_gap: 50
+kf_candidate_num: 50
+near_candidate_num: 10
+min_matched_num: 10
+rough_dis_threshold: 0.02
+descriptor_match_dis: 1.0
+relative_dis_threshold: 10.0
+
+log_predict_score_en: false
+log_predict_score_path: "/Log/pr.txt"
+log_time_cost_en: false
+log_time_cost_path: "/Log/timecost.txt"
+
+vis_filter_num: 16
+vis_loop_constraints_scale: 2.0

@@ -1,0 +1,17 @@
+<launch>
+<!-- Launch file for ouster OS1-128 LiDAR -->
+
+    <arg name="rviz" default="true" />
+    <arg name="lc_mode" default="2" />
+
+    <rosparam command="load" file="$(find intensity_td)/config/demo_sthereo.yaml" />
+    <rosparam command="load" file="$(find intensity_td)/config/image_fir.json" />
+    <param name="lc_mode" type="int" value="$(arg lc_mode)"/>
+    <node pkg="intensity_td" type="demo_sthereo_opt" name="demo_sthereo_opt" output="screen" /> 
+
+    <group if="$(arg rviz)">
+    <node launch-prefix="nice" pkg="rviz" type="rviz" name="itd_rviz" args="-d $(find intensity_td)/rviz_cfg/itd.rviz" />
+    <node launch-prefix="nice" pkg="rviz" type="rviz" name="path_rviz" args="-d $(find intensity_td)/rviz_cfg/itd_path.rviz" />
+    </group>
+
+</launch>

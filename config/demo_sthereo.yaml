@@ -1,0 +1,33 @@
+# common
+run_freq: 100.0 # Hz
+dataset_path: "/home/zyf/sthereo_data/sthereo_01_kaist_morning"
+width: 1024
+height: 128
+kf_frame_gap: 10
+
+# corner
+corner_fast_thres: 110.0
+corner_blind_min: 2.0
+corner_blind_max: 100.0
+corner_voxel_size: 0.3
+corner_nms_radius: 1.0
+# descriptor
+descriptor_near_num: 10
+descriptor_min_len: 2.0
+descriptor_max_len: 20.0
+# loop detector
+min_loop_search_gap: 50
+kf_candidate_num: 50
+near_candidate_num: 5
+min_matched_num: 10
+rough_dis_threshold: 0.007
+descriptor_match_dis: 1.0
+relative_dis_threshold: 10.0
+
+log_predict_score_en: false
+log_predict_score_path: "/Log/pr.txt"
+log_time_cost_en: false
+log_time_cost_path: "/Log/timecost.txt"
+
+vis_filter_num: 128
+vis_loop_constraints_scale: 8.0
