@@ -29,5 +29,5 @@ log_predict_score_path: "/Log/pr.txt"
 log_time_cost_en: false
 log_time_cost_path: "/Log/timecost.txt"
 
-vis_filter_num: 128
+vis_filter_num: 64
 vis_loop_constraints_scale: 8.0

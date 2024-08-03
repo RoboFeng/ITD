@@ -4,9 +4,18 @@ Intensity Triangle Descriptor Constructed from High-Resolution Spinning LiDAR In
 # 1. Introduction
 
 **The paper is currently under review, and the core code will be available after the paper is accepted. 
-At present, we provide a dynamic library (lib/libintensity_td.so) for the core code to ensure that you can test it in advance.**
+At present, we provide a dynamic library (src/libintensity_td.so) for the core code to ensure that you can test it in advance.**
 
 ITD has strong environmental adaptability, and experiments show that ITD can achieve high recall and accuracy loop detection tasks in indoor, urban, geometrically degraded corridors, and unstructured suburban roads.
+<p align='center'>
+    <img src="doc/exp1.gif" alt="drawing" width="450"/>
+    <img src="doc/exp2.gif" alt="drawing" width="450"/>
+</p>
+
+<p align='center'>
+    <img src="doc/exp3.gif" alt="drawing" width="450"/>
+    <img src="doc/exp4.gif" alt="drawing" width="450"/>
+</p>
 
 # 2. Prerequisites
 
