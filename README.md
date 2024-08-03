@@ -8,13 +8,13 @@ At present, we provide a dynamic library (src/libintensity_td.so) for the core c
 
 ITD has strong environmental adaptability, and experiments show that ITD can achieve high recall and accuracy loop detection tasks in indoor, urban, geometrically degraded corridors, and unstructured suburban roads.
 <p align='center'>
-    <img src="doc/exp1.gif" alt="drawing" width="450"/>
-    <img src="doc/exp2.gif" alt="drawing" width="450"/>
+    <img src="doc/exp1.gif" alt="drawing" width="350"/>
+    <img src="doc/exp2.gif" alt="drawing" width="350"/>
 </p>
 
 <p align='center'>
-    <img src="doc/exp3.gif" alt="drawing" width="450"/>
-    <img src="doc/exp4.gif" alt="drawing" width="450"/>
+    <img src="doc/exp3.gif" alt="drawing" width="350"/>
+    <img src="doc/exp4.gif" alt="drawing" width="350"/>
 </p>
 
 # 2. Prerequisites
