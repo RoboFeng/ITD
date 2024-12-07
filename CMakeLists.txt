@@ -76,11 +76,21 @@ file(GLOB intensity_td_thirdparty_files
   "include/AutoExposure/image_processing.cpp"
 )
 
-add_executable(demo_online_opt demo/demo_online_opt.cpp ${intensity_td_thirdparty_files})
-target_link_libraries(demo_online_opt ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${OpenCV_LIBRARY_DIRS} ${OpenCV_LIBS} gtsam libintensity_td.so)
+file(GLOB intensity_td_files
+  "src/IntensityTD.cpp"
+  "src/ITDVis.cpp"
+  "src/ITDLog.cpp"
+)
 
-add_executable(demo_sthereo_opt demo/demo_sthereo_opt.cpp ${intensity_td_thirdparty_files})
-target_link_libraries(demo_sthereo_opt ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${OpenCV_LIBRARY_DIRS} ${OpenCV_LIBS} gtsam libintensity_td.so)
+add_library(intensity_td
+  ${intensity_td_files}
+)
 
-add_executable(demo_fusionportable_opt demo/demo_fusionportable_opt.cpp ${intensity_td_thirdparty_files})
-target_link_libraries(demo_fusionportable_opt ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${OpenCV_LIBRARY_DIRS} ${OpenCV_LIBS} gtsam libintensity_td.so)
+add_executable(demo_online_opt demo/demo_online_opt.cpp ${intensity_td_files} ${intensity_td_thirdparty_files})
+target_link_libraries(demo_online_opt ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${OpenCV_LIBRARY_DIRS} ${OpenCV_LIBS} gtsam)
+
+add_executable(demo_sthereo_opt demo/demo_sthereo_opt.cpp ${intensity_td_files} ${intensity_td_thirdparty_files})
+target_link_libraries(demo_sthereo_opt ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${OpenCV_LIBRARY_DIRS} ${OpenCV_LIBS} gtsam)
+
+add_executable(demo_fusionportable_opt demo/demo_fusionportable_opt.cpp ${intensity_td_files} ${intensity_td_thirdparty_files})
+target_link_libraries(demo_fusionportable_opt ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${OpenCV_LIBRARY_DIRS} ${OpenCV_LIBS} gtsam)

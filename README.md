@@ -1,10 +1,7 @@
 # ITD
-Intensity Triangle Descriptor Constructed from High-Resolution Spinning LiDAR Intensity Image for Loop Closure Detection
+Intensity Triangle Descriptor Constructed from High-Resolution Spinning LiDAR Intensity Image for Loop Closure Detection [RAL-2024]
 
 # 1. Introduction
-
-**The paper is currently under review, and the core code will be available after the paper is accepted. 
-At present, we provide a dynamic library (src/libintensity_td.so) for the core code to ensure that you can test it in advance.**
 
 ITD has strong environmental adaptability, and experiments show that ITD can achieve high recall and accuracy loop detection tasks in indoor, urban, geometrically degraded corridors, and unstructured suburban roads.
 <p align='center'>
@@ -62,4 +59,21 @@ At present, we only tested the Ouster-OS1-128 LiDAR. You need to modify the rost
 
 ```shell
 roslaunch intensity_td run_online_opt.launch
+```
+
+# Acknowledgments
+
+Please cite our work ([ITD](https://ieeexplore.ieee.org/document/10669161)) if you are using our code.
+
+```
+@ARTICLE{10669161,
+  author={Zhang, Yanfeng and Tian, Yunong and Yang, Guodong and Li, Zhishuo and Luo, Mingrui and Li, En and Jing, Fengshui},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Intensity Triangle Descriptor Constructed From High-Resolution Spinning LiDAR Intensity Image for Loop Closure Detection}, 
+  year={2024},
+  volume={9},
+  number={10},
+  pages={8937-8944},
+  doi={10.1109/LRA.2024.3455851}}
+
 ```
