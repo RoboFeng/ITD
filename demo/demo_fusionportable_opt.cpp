@@ -298,7 +298,10 @@ int main(int argc, char **argv)
             itd_frame->time_stamp = ros_timestamp;
             itd_frame->keypoints = keypoints_kf;
             itd_frame->itds_vec = itds_kf;
-            itd_frame->points_ori = feat_kf;
+            if (lc_mode == 2)
+                feat_kf->clear();
+            else
+                itd_frame->points_ori = feat_kf;
             itd_frame->intensity_img = inten_img.clone();
 
             // Perform loop detection
